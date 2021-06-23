@@ -1,0 +1,22 @@
+#spring.application.name=config-server
+#server.port=8888
+#spring.cloud.config.server.git.uri=file://${user.home}/cloud-config
+#
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: git
+  application:
+    name: config-server
+  cloud:
+    config:
+      override-system-properties: false
+      server:
+        git:
+          uri: https://github.com/athulravindran87/spring-cloud-config.git
+          clone-on-start: true
+          search-paths:
+          username: chabane-youcef
+          password: youcef110863
